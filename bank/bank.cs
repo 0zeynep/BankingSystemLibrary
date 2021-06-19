@@ -6,7 +6,7 @@ namespace BankingLibrary
   {
     public decimal Payment { get; set; } 
     public decimal Transfer { get; set; } 
-    public decimal  ChangeOfInterestRate { get; set; } 
+    public decimal ChangeOfInterestRate { get; set; } 
     public decimal CalculateInterest { get; set; } 
   }
 }

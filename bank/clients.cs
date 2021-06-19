@@ -1,10 +1,10 @@
 using System;
 class Client
     {
-        protected readonly string FirstName, LastName, Age ,Email, Country, VisaCard, Password,PhonNumber;
+        protected readonly string FirstName, LastName, Age ,Email, Country, VisaCard, Password,PhoneNumber;
         protected int Amount = 0;
         public Client(string Email,string Password, string FirstName, string LastName, string Country,
-                      string Age, string PhonNumber,bool Vip)
+                      string Age, string PhoneNumber,bool Vip)
         {
             this.FirstName = FirstName;
             this.LastName = LastName;
@@ -12,11 +12,11 @@ class Client
             this.Country = Country;
             this.Age = Age;
             this.Password = Password;
-            this.PhonNumber = PhonNumber;
+            this.PhoneNumber = PhoneNumber;
             if (Vip) Amount = 10;
         }
         public Client(string Email,string Password,string FirstName, string LastName, string Country,
-                      string Age, string PhonNumber,int Amount)
+                      string Age, string PhoneNumber,int Amount)
         {
             this.FirstName = FirstName;
             this.LastName = LastName;
@@ -24,7 +24,7 @@ class Client
             this.Country = Country;
             this.Age = Age;
             this.Password = Password;
-            this.PhonNumber = PhonNumber;
+            this.PhoneNumber = PhoneNumber;
             this.Amount = Amount;
         }
         public string FName
@@ -53,7 +53,7 @@ class Client
         }
         public string Phone
         {
-            get { return PhonNumber; }
+            get { return PhoneNumber; }
         }
         public int Am
         {
