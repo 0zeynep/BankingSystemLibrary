@@ -1,16 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace BankingLibrary
+namespace BankingSystemLibrary.interestrates
 {
-    public class Command
-    {
-        public decimal Payment { get; set; }
-        public decimal Transfer { get; set; }
-        public decimal ChangeOfInterestRate { get; set; }
-        public decimal CalculateInterest { get; set; }
-    }
-
-    public class State
+    class FixedInterestRate
     {
         //https://www.sanfoundry.com/csharp-program-simple-interest/
         static void CalculateInterest()
@@ -28,20 +22,5 @@ namespace BankingLibrary
             Console.WriteLine("Total Amount : {0}", total_amt);
             Console.ReadLine();
         }
-
     }
-}
-namespace Visitor
-{
-    public List<Accounts> Accounts { get; set; } = new List<Accounts>();
-
-    public List<Credits> Credidts { get; set; } = new List<Credidts>();
-
-    public List<Loans> Loans { get; set; } = new List<Loans>();
-
-    public List<Deposits> Deposits { get; set; } = new List<Deposits>();
-
-    public List<Transactions> transactions { get; set; } = new List<Transactions>();
-
-}
 }
