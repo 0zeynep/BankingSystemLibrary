@@ -1,6 +1,6 @@
 using System;
 
-namespace Visitor
+namespace BankingSystemLibrary
 {
     public List<Accounts> Accounts { get; set; } = new List<Accounts>();
     

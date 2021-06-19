@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BankingSystemLibrary
+namespace BankingSystemLibrary.instruments
 {
-    interface InterestRate
+    class Deposit
     {
-
     }
 }

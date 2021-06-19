@@ -6,5 +6,7 @@ namespace BankingSystemLibrary
 {
     interface Operation
     {
+        void execute();
+        void assignCommand();
     }
 }
