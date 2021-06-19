@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BankingSystemLibrary.instruments
+namespace BankingSystemLibrary.interestrates
 {
-    class Loan : Instrument
+    class ChangingInterestRates
     {
     }
 }

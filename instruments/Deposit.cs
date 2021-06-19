@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankingSystemLibrary.instruments
 {
-    class Deposit
+    class Deposit : Instrument
     {
     }
 }

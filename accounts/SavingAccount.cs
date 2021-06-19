@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankingSystemLibrary.accounts
 {
-    class SavingAccount
+    class SavingAccount : Account
     {
     }
 }

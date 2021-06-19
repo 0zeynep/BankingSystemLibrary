@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankingSystemLibrary.accounts
 {
-    class CurrencyAccount
+    class CurrencyAccount : Account
     {
     }
 }
