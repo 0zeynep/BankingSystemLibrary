@@ -4,35 +4,43 @@ using System.Text;
 
 namespace BankingSystemLibrary
 {
-    abstract class Client
+    class Client
     {
-        protected string email, country, password, phoneNumber;
-        protected int clientId, amount;
+        protected string name;
+        protected int clientId;
+        protected List<Account> accountId;
+        public Bank myBank;
 
+        public Client(int clientId, string name)
+        {
+            this.clientId = clientId;
+            this.name = name;
+            this.accountId = new List<int>;
+        }
         public int ClientId
         {
-            get { return ClientId; }
+            get { return clientId; }
         }
-        public string Email
+        public string Name
         {
-            get { return email; }
+            get { return name; }
         }
-        public string Country
+        public void CreateAccount()
         {
-            get { return country; }
+            Account accountCreated = myBank.RegisterAccount(this);
+            accountId.Add(accountCreated);
         }
-        public string Password
+        public void CloseAccount(Account accountToClose)
         {
-            get { return password; }
+            bool result = myBank.CloseAccount(accountToClose, this);
+            if (result)
+            {
+                accountId.Remove(accountToClose);
+            }
         }
-        public string PhoneNumber
+        public void OrderTransfer(Account originAccountId, Account targetAccountId, float amountToTransfer)
         {
-            get { return phoneNumber; }
-        }
-        public int Amount
-        {
-            set { amount = value; }
-            get { return amount; }
+            myBank.TransferMoney(originAccountId, targetAccountId, amountToTransfer, this);
         }
     }
 }

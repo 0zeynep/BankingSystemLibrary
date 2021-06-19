@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankingSystemLibrary.instruments
 {
-    class Loan
+    class Loan : Instrument
     {
     }
 }
