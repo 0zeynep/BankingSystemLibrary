@@ -10,6 +10,7 @@ namespace BankingSystemLibrary
         protected int clientId;
         protected List<Account> accountId;
         public Bank myBank;
+        protected List<Command> commands = new List<Command>();
 
         public Client(int clientId, string name)
         {
@@ -27,8 +28,11 @@ namespace BankingSystemLibrary
         }
         public void CreateAccount()
         {
-            Account accountCreated = myBank.RegisterAccount(this);
-            accountId.Add(accountCreated);
+            Command command = new commands.CreateAccountCommand(myBank, this);
+            command.Execute();
+            commands.Add(command);
+            //Account accountCreated = myBank.RegisterAccount(this);
+            //accountId.Add(accountCreated);
         }
         public void CloseAccount(Account accountToClose)
         {
@@ -40,7 +44,9 @@ namespace BankingSystemLibrary
         }
         public void OrderTransfer(Account originAccountId, Account targetAccountId, float amountToTransfer)
         {
-            myBank.TransferMoney(originAccountId, targetAccountId, amountToTransfer, this);
+            Command command = new commands.TransferCommand(originAccountId, targetAccountId, amountToTransfer, myBank, this);
+            command.Execute();
+            commands.Add(command);
         }
     }
 }
