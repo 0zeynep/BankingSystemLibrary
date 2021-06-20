@@ -4,7 +4,9 @@ using System.Text;
 
 namespace BankingSystemLibrary
 {
-    interface Instrument
+    public abstract class AbstractAccount
     {
+        public abstract void Accept(IVisitor visitor);
+
     }
 }

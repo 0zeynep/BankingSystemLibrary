@@ -4,8 +4,8 @@ using System.Text;
 
 namespace BankingSystemLibrary
 {
-    interface InterestRate
+    public interface IVisitor
     {
-
+        void Visit(AbstractAccount abstractAccount);
     }
 }
