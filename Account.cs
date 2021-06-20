@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankingSystemLibrary
 {
-    class Account
+    public class Account
     {
         protected int accountId;
         protected float balance;
