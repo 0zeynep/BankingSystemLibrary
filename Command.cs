@@ -4,9 +4,8 @@ using System.Text;
 
 namespace BankingSystemLibrary
 {
-    interface Operation
+    interface Command
     {
-        void execute();
-        void assignCommand();
+        public abstract void Execute();
     }
 }
