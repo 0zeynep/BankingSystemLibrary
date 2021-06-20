@@ -4,19 +4,19 @@ using System.Text;
 
 namespace BankingSystemLibrary
 {
-    class Client
+    public class Client
     {
         protected string name;
         protected int clientId;
         protected List<Account> accountId;
         public Bank myBank;
-        protected List<Command> commands = new List<Command>();
+        public List<Command> commands = new List<Command>();
 
         public Client(int clientId, string name)
         {
             this.clientId = clientId;
             this.name = name;
-            this.accountId = new List<int>;
+            this.accountId = new List<Account>();
         }
         public int ClientId
         {

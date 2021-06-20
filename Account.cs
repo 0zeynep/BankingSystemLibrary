@@ -4,12 +4,13 @@ using System.Text;
 
 namespace BankingSystemLibrary
 {
-    public class Account
+    public class Account : AbstractAccount
     {
         protected int accountId;
-        protected float balance;
-        Client ownerId;
-        public Account(int accountId, Client ownerId, float balance)
+        protected double balance;
+        protected double interestRate = 1.01;
+        protected Client ownerId;
+        public Account(int accountId, Client ownerId, double balance)
         {
             this.accountId = accountId;
             this.ownerId = ownerId;
@@ -24,13 +25,20 @@ namespace BankingSystemLibrary
         {
             get { return ownerId; }
         }
-        public float Balance
+        public double Balance
         {
             get { return balance; }
             set { balance = Balance; }
+        }        
+        public double InterestRate
+        {
+            get { return interestRate; }
+            set { interestRate = InterestRate; }
         }
-
-
+        public override void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
+        }
 
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankingSystemLibrary
 {
-    class Bank
+    public class Bank
     {
         private List<Client> Clients;
         private List<Account> Accounts;

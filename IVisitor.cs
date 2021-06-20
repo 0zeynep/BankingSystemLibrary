@@ -4,8 +4,8 @@ using System.Text;
 
 namespace BankingSystemLibrary
 {
-    public interface Command
+    public interface IVisitor
     {
-        public abstract void Execute();
+        void Visit(AbstractAccount abstractAccount);
     }
 }

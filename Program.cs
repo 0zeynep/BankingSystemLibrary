@@ -8,7 +8,6 @@ namespace BankingSystemLibrary
     {
         public static void Main(string[] args)
         {
-            // Constructor is protected -- cannot use new
             BankingSystem myBankingSystem = BankingSystem.Instance();
 
             Console.ReadKey();

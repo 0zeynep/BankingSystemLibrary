@@ -20,7 +20,7 @@ namespace BankingSystemLibrary.decorators
         }
         public void ListCoowners(Account account)
         {
-            Console.WriteLine("Owner: " + this.OwnerId.ClientId);
+            Console.WriteLine("Owner: " + account.OwnerId.ClientId);
             foreach (Client coowner in coowners)
             {
                 Console.WriteLine("Coowner: " + coowner.ClientId);
